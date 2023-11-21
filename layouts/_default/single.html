@@ -19,6 +19,12 @@
     {{ end }}
   </header>
 
+
+  {{ if .Params.image }}
+      <img src="{{ .Params.image }}" alt="{{ .Title }}" style="">
+  {{ else }}
+  {{ end }}
+
   <section>{{ .Content }}</section>
 
   <!-- Post Tags -->

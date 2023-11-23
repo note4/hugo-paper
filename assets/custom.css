@@ -1,1 +1,10 @@
+/*
+ ! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
+ */
+.columns-6{columns: 6;}
+.columns-8{columns: 8;}
+.max-w-full	{max-width: 100%;}
+
+
 /* Place custom css here. */
+.image{max-height: 80vh;}

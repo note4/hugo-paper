@@ -1,18 +1,6 @@
 {{ define "main" }}
 
-555555555555555 terms
-
-<ul class="tags-list">
-  {{ range .Site.Taxonomies.tags }}
-          <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
-  {{ end }}
-</ul>
-<style>
-  .tags-list{list-style: none;overflow: hidden; padding: 0;}
-  .tags-list li{float: left; padding: 0 2px 0 20px;}
-  .tags-list li a{}
-</style>
-
+{{ partial "tags_nav.html" . }}
 
 <!-- Tag Title -->
 {{ if and .Title (eq .Type "tags") }}

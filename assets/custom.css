@@ -8,3 +8,42 @@
 
 /* Place custom css here. */
 .image{max-height: 80vh;}
+
+
+.grid {
+    
+  }
+  
+  /* clear fix */
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  /* ---- .grid-item ---- */
+  
+  .grid-sizer,
+  .grid-item {
+    width: 246px
+  }
+  
+  .grid-item {
+    float: left;
+  }
+  
+  .grid-item img {
+    display: block;
+    max-width: 100%;
+  }
+  
+
+.grid{padding: 1rem; background-color: rgba(165, 165, 165, 0.1);}
+.item{padding: 10px;}
+.item-title{font-size: 1rem; margin: 1rem 0 0;}
+.item-img{ position: relative; z-index: 1; display: block; max-height: 90vh; overflow: hidden;}
+.item-img img{margin: 0; display: block; border-radius: .5rem;}
+
+.tags-list{list-style: none;overflow: hidden; padding: 0;}
+.tags-list li{float: left; display: inline-block; margin: 0.25em 0.25em; padding: 0.2em 0.6em; background-color: rgba(0, 0, 225, 0.8); color: rgba(255, 255, 255, 0.8);}
+.tags-list li a{color: inherit;}

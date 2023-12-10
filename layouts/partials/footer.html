@@ -16,3 +16,36 @@
     >✎ Paper</a
   >
 </footer>
+
+
+<!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
+<script src="/js/masonry.pkgd.min.js"></script>
+<script>
+  // external js: masonry.pkgd.js, imagesloaded.pkgd.js
+
+// init Masonry
+var grid = document.querySelector('.grid');
+
+var msnry = new Masonry( grid, {
+  itemSelector: '.grid-item',
+  columnWidth: '.grid-sizer',
+  percentPosition: true
+});
+
+imagesLoaded( grid ).on( 'progress', function() {
+  // layout Masonry after each image loads
+  msnry.layout();
+});
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<!-- <script src="/js/fancybox.umd.js"></script> -->
+<script>
+  Fancybox.bind('[data-fancybox="gallery"]', {
+    Thumbs : {
+      type: "modern"
+    }
+  });    
+</script>

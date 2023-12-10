@@ -1,5 +1,13 @@
 {{ define "main" }}
 
+
+{{ partial "head.html" . }}
+<body class="text-black duration-200 ease-out dark:text-white">
+  {{ partial "header.html" . }}
+
+  <main
+    class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-full px-8 pb-16 pt-12 dark:prose-invert"
+  >
 {{ partial "tags_nav.html" . }}
 
 <!-- Tag Title -->
@@ -88,7 +96,9 @@
 </nav>
 {{ end }}<!---->
 
+</main>
 
+{{ partial "footer.html" . }}
 
 
 

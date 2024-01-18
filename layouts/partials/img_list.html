@@ -6,6 +6,10 @@
       >Featured</span
     >
     {{ end }}
+
+  <a class="no-underline" href="{{ .Permalink }}"><!-- class="absolute inset-0 text-[0]"  {{ .Title }} -->
+    <h2 class="pb-1 font-bold item-title">{{ .Title }}</h2>
+  </a>
   
     {{ if .Params.image }}
       <a href="{{ .Params.image }}" class="item-img" data-fancybox="gallery">
@@ -14,12 +18,27 @@
     {{ else }}
     {{ end }}
 
-    <h2 class="pb-1 font-bold !leading-none item-title">{{ .Title }}</h2>
-    <time class="text-sm antialiased opacity-60"
-      >{{ .Date | time.Format ":date_medium" }}</time
-    >
-
-    <a class="absolute inset-0 text-[0]" href="{{ .Permalink }}">{{ .Title }}</a>
   
+  <!-- Post Tags -->
+  {{ if .Params.tags }}
+  <footer class="mb-6 flex flex-wrap">
+    {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }}
+    <a
+      class="mt-1.5 mb-1.5 mr-1.5 rounded-lg bg-black/[3%] no-underline dark:bg-white/[8%]"
+      style="font-size: 0.6em; padding: 2px 6px;"
+      href="{{ $href }}/"
+      >{{ . }}</a
+    >
+    {{ end }}
+  </footer>
+  {{ end }}
+
+  
+  <time class="text-sm antialiased opacity-60"
+  >{{ .Date | time.Format ":date_medium" }}  {{ .Slug }}</time
+>
+
+
+
     
   </section>

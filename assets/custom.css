@@ -40,7 +40,7 @@
 
 .grid{padding: 1rem; background-color: rgba(165, 165, 165, 0.1);}
 .item{padding: 10px;}
-.item-title{font-size: 1rem; margin: 1rem 0 0;}
+.item-title{font-size: 0.85rem;  margin: 1rem 0 0;}
 .item-img{ position: relative; z-index: 1; display: block; max-height: 90vh; overflow: hidden;}
 .item-img img{margin: 0; display: block; border-radius: .5rem;}
 
